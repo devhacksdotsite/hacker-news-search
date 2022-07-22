@@ -7,7 +7,7 @@ export const UseFetch = (txt) => {
     useEffect(() => {
         if (txt !== null) {
             (async () => {
-                const res = await fetch(`http://hn.algolia.com/api/v1/search?query=${ JSON.stringify(txt) }`);
+                const res = await fetch(`https://hn.algolia.com/api/v1/search?query=${ JSON.stringify(txt) }`);
 
                 if (res.ok) {
                     const d = await res.json();
